@@ -1,0 +1,46 @@
+/* styles.css */
+
+body {
+    background-color: #1e1e1e;
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 30px;
+}
+
+#game-container {
+    background-color: #2e2e2e;
+    border-radius: 15px;
+    padding: 20px;
+    width: 350px;
+    margin: auto;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+#emoji-display {
+    font-size: 50px;
+    margin: 20px 0;
+}
+
+.option {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    background-color: #444;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.option:hover {
+    background-color: #666;
+}
+
+#feedback {
+    margin-top: 20px;
+    font-weight: bold;
+}
