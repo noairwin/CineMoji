@@ -26,6 +26,11 @@ Play it now 👉 [CineMoji](https://noairwin.github.io/CineMoji/)
 
 ---
 
+## 📸 Screenshots
+<img width="1710" alt="Screenshot 2025-06-30 at 17 00 27" src="https://github.com/user-attachments/assets/518ae96f-8fda-427a-b316-7e60ef9d1138" />
+
+<img width="1710" alt="Screenshot 2025-06-30 at 17 01 22" src="https://github.com/user-attachments/assets/db55301a-a679-4dd2-9e2c-c44b7b60a137" />
+
 ## 📁 File Structure
 - `index.html`        - The main HTML file (structure of the game)
 - `styles.css`        - Styling for the game (colors, layout, fonts)
