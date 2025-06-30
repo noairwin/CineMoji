@@ -88,15 +88,15 @@ const emojiDisplay = document.getElementById("emoji-display");
 const optionsContainer = document.getElementById("options");
 const feedback = document.getElementById("feedback");
 
-// טוען שאלה חדשה למסך
+// load new question
 function loadQuestion() {
     const q = questions[currentQuestion];
     emojiDisplay.textContent = q.emojis;
     
-    // מנקה כפתורים ישנים
+    // clears the buttons
     optionsContainer.innerHTML = "";
 
-    // יוצר כפתורים חדשים
+    // creates new ones
     q.options.forEach(option => {
         const btn = document.createElement("button");
         btn.textContent = option;
@@ -108,7 +108,7 @@ function loadQuestion() {
     feedback.textContent = "";
 }
 
-// בודק תשובה
+// checks the answer
 function checkAnswer(selected) {
     const q = questions[currentQuestion];
     if (selected === q.answer) {
@@ -117,9 +117,9 @@ function checkAnswer(selected) {
         score++;
         currentQuestion++;
 
-        // בודק אם יש עוד שאלות
+        // checks for new questions
         if (currentQuestion < questions.length) {
-            setTimeout(loadQuestion, 1000); // ממשיך אחרי שנייה
+            setTimeout(loadQuestion, 1000); // contineus after a sec
         } else {
             setTimeout(showWinScreen, 1000);
         }
@@ -129,26 +129,26 @@ function checkAnswer(selected) {
     }
 }
 
-// מסך ניצחון
+// win screen
 function showWinScreen() {
     emojiDisplay.textContent = "🏆";
     optionsContainer.innerHTML = "";
     feedback.innerHTML = `You finished the game with <b>${score}</b> correct answers! `;
     feedback.style.color = "gold";
 
-    // יצירת כפתור "שחק שוב"
+    // creates a play again button
     const playAgainBtn = document.createElement("button");
     playAgainBtn.textContent = "play again";
-    playAgainBtn.classList.add("option"); // משתמש בעיצוב הקיים
+    playAgainBtn.classList.add("option"); 
     playAgainBtn.addEventListener("click", () => {
         currentQuestion = 0;
         score = 0;
-        loadQuestion(); // טוען מחדש את המשחק
+        loadQuestion(); // load the game from the start
     });
 
     optionsContainer.appendChild(playAgainBtn);
 }
 
 
-// מתחילים
+// starts
 loadQuestion();
